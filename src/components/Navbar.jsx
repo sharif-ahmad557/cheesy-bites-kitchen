@@ -1,22 +1,39 @@
 import Image from "next/image";
-import logoImage from "../assets/logo-1.png";
+import logoImage from "../assets/logo.png";
+import Link from "next/link";
 export default function Navbar() {
-      const hoverColorClass = 'bg-amber-700'; 
-  const borderColor = 'border-amber-700';
+  const hoverColorClass = "bg-amber-700";
+  const borderColor = "border-amber-700";
 
   return (
     <div className="w-full bg-gray-950 p-2 border-b border-gray-500">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Image src={logoImage} alt="CheesyBites Logo" width={100} height={50} />
+        <Link href="/">
+          <Image
+            src={logoImage}
+            alt="CheesyBites Logo"
+            width={100}
+            height={50}
+          />
+        </Link>
         <div className="flex space-x-4 items-center">
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Menu</p>
-          <p>Contact</p>
+          <Link href="/">
+            <p>Home</p>
+          </Link>
+          <Link href="/about">
+            <p>About Us</p>
+          </Link>
+          <Link href="/menu">
+            <p>Menu</p>
+          </Link>
+          <Link href="/contact">
+            <p>Contact</p>
+          </Link>
         </div>
         <div className=" space-x-4">
-          <button
-            className={`
+          <Link href="/login">
+            <button
+              className={`
                 rounded-xl
         relative 
         px-6 py-3 
@@ -29,9 +46,9 @@ export default function Navbar() {
         hover:text-black 
         focus:outline-none
       `}
-          >
-            <span
-              className={`
+            >
+              <span
+                className={`
           absolute 
           inset-0 
           w-full h-full 
@@ -41,13 +58,16 @@ export default function Navbar() {
           transition-transform duration-500 
           ease-out
         `}
-              aria-hidden="true"
-            ></span>
+                aria-hidden="true"
+              ></span>
 
-            <span className="relative z-20">LOGIN</span>
-          </button>
-           <button 
-      className={`
+              <span className="relative z-20">LOGIN</span>
+            </button>
+          </Link>
+
+          <Link href="/signup">
+            <button
+              className={`
         rounded-xl
         relative 
         px-6 py-3 
@@ -60,10 +80,9 @@ export default function Navbar() {
         hover:text-black 
         focus:outline-none
       `}
-    >
-      
-      <span 
-        className={`
+            >
+              <span
+                className={`
           absolute 
           inset-0 
           w-full h-full 
@@ -73,16 +92,16 @@ export default function Navbar() {
           transition-transform duration-500 
           ease-out
         `}
-        aria-hidden="true"
-      ></span>
-      
-      
-      <span className="relative z-20">
-        SIGN UP
-      </span>
-    </button>
+                aria-hidden="true"
+              ></span>
+
+              <span className="relative z-20">SIGN UP</span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 }
+
+// Home, About, Menu, Contact, Order History, Reservations, Specials
