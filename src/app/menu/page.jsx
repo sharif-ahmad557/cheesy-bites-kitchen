@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -8,11 +8,11 @@ const hoverColorClass = "bg-amber-700";
 const borderColor = "border-amber-700";
 
 export default function Menu() {
-  const [menuItems, setMenuItems] = useState([]); 
-  const [filteredItems, setFilteredItems] = useState([]); 
-  const [loading, setLoading] = useState(true); 
-  const [searchLoading, setSearchLoading] = useState(false); 
-  const [searchText, setSearchText] = useState(""); 
+  const [menuItems, setMenuItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     const fetchMenu = async () => {
@@ -22,7 +22,7 @@ export default function Menu() {
         });
         const data = await res.json();
         setMenuItems(data);
-        setFilteredItems(data); 
+        setFilteredItems(data);
         setLoading(false);
       } catch (error) {
         console.error("Failed to fetch menu items", error);
@@ -40,7 +40,7 @@ export default function Menu() {
         item.title.toLowerCase().includes(searchText.toLowerCase())
       );
       setFilteredItems(results);
-      setSearchLoading(false); 
+      setSearchLoading(false);
     }, 500);
 
     return () => clearTimeout(delayDebounceFn);
