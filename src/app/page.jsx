@@ -1,11 +1,16 @@
+import HeroSection from "./Hero";
+import WelcomeSection from "./WellcomeSection";
+import UpcomingEvent from "./UpcomingEvent";
+import ChefSection from "./ChefSection";
+import TestimonialsSection from "./TestimonialsSection";
 export default function Home() {
   return (
     <div>
-      <h2>hero section</h2>
-      <h2>Welcome to Restoran/restorent</h2>
-      <h2>Meet Our Awesome Master Chefs/resturent</h2>
-      <h2>Upcoming Event /grilli</h2>
-      <h2>customer reviews/modiul</h2>
+      <HeroSection />
+      <WelcomeSection />
+      <UpcomingEvent />
+      <ChefSection />
+      <TestimonialsSection />
     </div>
   );
 }

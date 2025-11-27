@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🍽️ Cheesy Bites Kitchen
 
-## Getting Started
+**Cheesy Bites Kitchen** is a modern, full-stack restaurant application built with **Next.js**, **Tailwind CSS**, and **MongoDB**.  
+It features a premium Amber & Black dark theme, dynamic menu management, Firebase authentication, and a fully responsive UI.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- **Dynamic Menu:** Real-time search with debounce filtering.
+- **Product Details Page:** Ingredients, nutrition facts, related foods, etc.
+- **Authentication:** Firebase-based secure Login & Signup.
+- **Admin Dashboard:** Add new items and Manage (View/Delete) existing items.
+- **Responsive Design:** Mobile, Tablet & Desktop optimized.
+- **Interactive UI:** Swiper.js sliders, Glassmorphism effects & smooth animations.
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+
+- Next.js 14+ (App Router)
+- Tailwind CSS
+
+### **Backend**
+
+- Node.js
+- Express.js
+
+### **Database**
+
+- MongoDB (CRUD operations)
+
+### **Authentication**
+
+- Firebase Auth
+
+### **Libraries**
+
+- React Icons
+- Lucide React
+- Swiper.js
+- React Hot Toast
+
+---
+
+## ⚙️ Setup & Installation Guide
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/sharif-ahmad557/cheesy-bites-kitchen
+```
+
+---
+
+## 🖥️ 2️⃣ Client-Side Setup (Frontend)
+
+### Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### Create `.env.local` in root directory
+
+````
+NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyA_oKg7upIFkzEaEPvYa_5qydw6Xly0v5U
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=cheesy-bites-kitchen.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=cheesy-bites-kitchen
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=cheesy-bites-kitchen.firebasestorage.app
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=123288326696
+NEXT_PUBLIC_FIREBASE_APP_ID=1:123288326696:web:112be691b1942891e4db1d```
+
+### Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+````
+
+👉 Frontend runs at: **http://localhost:3000**
+
+---
+
+## 🔧 3️⃣ Server-Side Setup (Backend)
+
+### Install Backend Dependencies
+
+```bash
+npm install express cors mongodb dotenv
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Create `.env` for backend
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+DB_USER=cheesybites
+DB_PASS=HaMmAd%4012580
+PORT=5000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Run Backend Server
 
-## Learn More
+```bash
+node index.js
+# or
+nodemon index.js
+```
 
-To learn more about Next.js, take a look at the following resources:
+👉 Backend runs at: \*\*http://localhost:5000/menu
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Route Summary
 
-## Deploy on Vercel
+### 🌍 Public Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Path         | Description                                           |
+| ------------ | ----------------------------------------------------- |
+| `/`          | Home page (Hero, Featured Items, Chefs, Testimonials) |
+| `/menu`      | All food items with live search                       |
+| `/menu/[id]` | Single food item details                              |
+| `/about`     | About Us page                                         |
+| `/contact`   | Contact form & location                               |
+| `/login`     | Login page                                            |
+| `/signup`    | Signup page                                           |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 🔐 Protected Routes (Requires Login)
+
+| Path               | Description          |
+| ------------------ | -------------------- |
+| `/add-product`     | Add new food items   |
+| `/manage-products` | View/Delete products |
+
+---
+
+## 🔗 API Endpoints (Backend)
+
+| Method | Endpoint    | Description             |
+| ------ | ----------- | ----------------------- |
+| GET    | `/menu`     | Get all menu items      |
+| GET    | `/menu/:id` | Get a single item by ID |
+| POST   | `/menu`     | Add a new food item     |
+| DELETE | `/menu/:id` | Delete a food item      |
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Shariful Islam**  
+Feel free to ⭐ the repository!
