@@ -5,8 +5,8 @@ import { Utensils, Award, Users, Heart } from "lucide-react";
 import heroImg from "../../../public/hero_img.jpg";
 import heroImg1 from "../../../public/hero_img-1.jpg";
 import heroImg2 from "../../../public/hero_img-2.jpg";
-import recent1 from "../../../public/RECENT/recent-1.jpg";
-import recent2 from "../../../public/RECENT/recent-2.jpg";
+import recent1 from "../../../public/recent/recent-1.jpg";
+import recent2 from "../../../public/recent/recent-2.jpg";
 
 const TeamMemberCard = ({ name, title, imgSrc }) => (
   <div className="group bg-gray-900 border border-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-amber-900/20 hover:border-amber-500/50 transition-all duration-500 relative overflow-hidden">

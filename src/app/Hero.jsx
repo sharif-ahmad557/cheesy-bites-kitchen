@@ -64,7 +64,7 @@ export default function HeroSection() {
                   </p>
 
                   <div className="hero-btn">
-                    <Link href="/login" passHref>
+                    <Link href="/contact" passHref>
                       <button className="relative px-10 py-4 rounded-full text-lg font-bold tracking-wide text-amber-500 bg-black/80 backdrop-blur-sm border border-amber-500/50 overflow-hidden transition-all duration-300 group hover:text-black hover:border-transparent hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]">
                         <span
                           className={`absolute inset-0 w-full h-full ${hoverColorClass} transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out`}
