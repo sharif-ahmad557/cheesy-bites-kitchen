@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Utensils, ChefHat } from "lucide-react"; 
+import { Utensils, ChefHat } from "lucide-react";
 
 export default function WelcomeSection() {
   const images = [
@@ -72,16 +72,17 @@ export default function WelcomeSection() {
             </h2>
 
             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-              Experience the finest dining with authentic flavors and
-              exceptional service. Tempor erat elitr rebum at clita. Diam dolor
-              diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et
-              sit.
+              Experience the ultimate comfort food journey! At Cheesy Bites
+              Kitchen, we master the art of bringing joy through meticulously
+              crafted, cheesy delicacies. From gourmet grilled cheese to
+              signature mac 'n' cheese, every bite is a celebration of flavor
+              and nostalgia.
             </p>
 
             <p className="text-gray-500 leading-relaxed mb-10 border-l-4 border-amber-500 pl-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet.
+              We are dedicated to using the freshest local ingredients and
+              premium cheeses to create dishes that warm the soul. Join us for a
+              truly unforgettable dining experience where quality meets comfort.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">

@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, ArrowRight } from "lucide-react"; 
+import { CalendarDays, ArrowRight } from "lucide-react";
 
 export default function UpcomingEvent() {
   const items = [
     {
-      img: "/RECENT/recent-1.jpg",
+      img: "/recent/recent-1.jpg",
       date: "15",
       month: "AUG",
       year: "2022",
@@ -15,7 +15,7 @@ export default function UpcomingEvent() {
       desc: "Delicious recipes and flavours that excite your taste buds.",
     },
     {
-      img: "/RECENT/recent-2.jpg",
+      img: "/recent/recent-2.jpg",
       date: "08",
       month: "SEP",
       year: "2022",
@@ -24,7 +24,7 @@ export default function UpcomingEvent() {
       desc: "Tips and tricks to maintain a healthy diet and lifestyle.",
     },
     {
-      img: "/RECENT/recent-3.png",
+      img: "/recent/recent-3.png",
       date: "03",
       month: "SEP",
       year: "2022",
